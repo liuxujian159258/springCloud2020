@@ -6,19 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cloudApiCommons" />
         <module name="paymentProvider8006" />
-        <module name="hystrixPaymentProvider8001" />
-        <module name="consumerHystrixOrder80" />
+        <module name="cloudConsumerHystrixDashboard9001" />
+        <module name="paymentProvider8004" />
+        <module name="cloudEurekaServer7002" />
         <module name="paymentProvider8002" />
         <module name="paymentProvider8001" />
-        <module name="consumerOpenFeignOrder80" />
-        <module name="cloudEurekaServer7002" />
         <module name="consumerOrder80" />
-        <module name="consumerConsulOrder80" />
-        <module name="paymentProvider8004" />
-        <module name="cloudConsumerHystrixDashboard9001" />
         <module name="cloudEurekaServer7001" />
+        <module name="consumerOpenFeignOrder80" />
+        <module name="consumerHystrixOrder80" />
+        <module name="consumerConsulOrder80" />
+        <module name="hystrixPaymentProvider8001" />
+        <module name="cloudGateway9527" />
+        <module name="cloudApiCommons" />
       </profile>
     </annotationProcessing>
   </component>

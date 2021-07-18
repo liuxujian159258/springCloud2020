@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/cloudEurekaServer7001/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloudEurekaServer7002/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloudEurekaServer7002/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudGateway9527/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudGateway9527/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumerConsulOrder80/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumerConsulOrder80/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumerHystrixOrder80/src/main/java" charset="UTF-8" />
