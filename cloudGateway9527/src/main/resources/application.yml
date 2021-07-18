@@ -1,0 +1,39 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能，利用微服务名称进行路由
+      routes:
+        - id: payment_routh2
+#          uri: http://localhost:8001
+          uri: lb://CLOUD-PAYMENT-SERVICE
+          predicates:
+            - Path=/payment/feign/time
+
+        - id: payment_routh #路由id，无固定规则
+#          uri: http://localhost:8001 #地址
+          uri: lb://CLOUD-PAYMENT-SERVICE
+          predicates:
+            - Path=/payment/get/** #断言路径
+#            - After=2021-07-18T17:37:38.084+08:00[Asia/Shanghai] #在什么时间后启动
+#            - Cookie=username,zzyy #需要带上这个cookie
+
+
+eureka:
+  client:
+    register-with-eureka: true #注册自己
+    fetch-registry: true #是否从EurekaServer抓取已经有的注册信息，默认为true，集群必须设置为true
+    service-url:
+      #      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+    instance-id: could-gateway-service
+    prefer-ip-address: true #显示ip地址
+#    lease-renewal-interval-in-seconds: 1 #客户端向服务端发送心跳的时间间隔默认30秒
+#    lease-expiration-duration-in-seconds: 2 #Eureka服务的在收到最后一次心态后等待时间，默认90秒，超时剔除服务
