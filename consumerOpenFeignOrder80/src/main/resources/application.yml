@@ -1,0 +1,21 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-order-service
+
+eureka:
+  client:
+    register-with-eureka: true #注册自己
+    fetch-registry: true #是否从EurekaServer抓取已经有的注册信息，默认为true，集群必须设置为true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+#      defaultZone: http://localhost:7001/eureka
+
+ribbon:
+  ReadTimeout: 5000 #建立连接的时间
+  ConnectTimeout: 5000 #读取资源所用时间
+logging:
+  level:
+    springCloud.service.PaymentFeignService: debug #以什么级别监控那个接口
